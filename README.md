@@ -10,6 +10,43 @@ use OmniAuth::Builder do
 end
 ```
 
+# Example auth hash
+
+```json
+{
+   "provider":"readmill",
+   "uid":5708,
+   "info":{
+      "name":"Christof Dorner",
+      "email":"xxx",
+      "nickname":"chdorner",
+      "first_name":"Christof",
+      "last_name":"Dorner",
+      "location":"Zürich",
+      "description":"iOS/Android/Rails developer. geek.",
+      "image":"http://static.readmill.com/avatars/6d4357e2e7839a27011a25835b9fabc3-medium.png?1320704267",
+      "urls":{
+         "Readmill":"http://readmill.com/chdorner",
+         "Website":"http://chdorner.com"
+      }
+   },
+   "credentials":{
+      "token":"xxx",
+      "refresh_token":"xxx",
+      "expires_at":1321541661,
+      "expires":true
+   },
+   "extra":{
+      "books_interesting":5,
+      "books_open":3,
+      "books_finished":2,
+      "books_abandoned":0,
+      "followers":3,
+      "followings":13
+   }
+}
+```
+
 # License (MIT)
 
 Copyright (c) 2011 Christof Dorner
