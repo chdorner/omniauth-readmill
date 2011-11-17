@@ -8,13 +8,13 @@ describe OmniAuth::Strategies::Readmill do
     subject{ fresh_strategy }
     
     it 'should have the correct authorize url' do
-	    instance = subject.new(app)
-	    instance.client.options[:authorize_url].should == 'http://readmill.com/oauth/authorize'
-	  end
-	  
-	  it 'should have the correct token url' do
-		  instance = subject.new(app)
-		  instance.client.options[:token_url].should == 'http://readmill.com/oauth/token'
-		end
+      instance = subject.new(app)
+      instance.client.options[:authorize_url].should == 'http://readmill.com/oauth/authorize'
+    end
+    
+    it 'should have the correct token url' do
+      instance = subject.new(app)
+      instance.client.options[:token_url].should == 'http://readmill.com/oauth/token'
+    end
   end
 end

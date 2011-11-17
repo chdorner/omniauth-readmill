@@ -13,7 +13,7 @@ module OmniAuth
 
       info do
         {
-	        'name' => raw_info['fullname'],
+          'name' => raw_info['fullname'],
           'email' => raw_info['email'],
           'nickname' => raw_info['username'],
           'first_name' => raw_info['firstname'],
@@ -29,15 +29,15 @@ module OmniAuth
       end
       
       extra do
-	      {
-		      'books_interesting' => raw_info['books_interesting'],
-		      'books_open' => raw_info['books_open'],
-		      'books_finished' => raw_info['books_finished'],
-		      'books_abandoned' => raw_info['books_abandoned'],
-		      'followers' => raw_info['followers'],
-		      'followings' => raw_info['followings']
-	      }
-	    end
+        {
+          'books_interesting' => raw_info['books_interesting'],
+          'books_open' => raw_info['books_open'],
+          'books_finished' => raw_info['books_finished'],
+          'books_abandoned' => raw_info['books_abandoned'],
+          'followers' => raw_info['followers'],
+          'followings' => raw_info['followings']
+        }
+      end
 
       def raw_info
         access_token.options[:mode] = :query
