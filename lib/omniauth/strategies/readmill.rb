@@ -6,7 +6,8 @@ module OmniAuth
       option :client_options, {
         :site => 'http://api.readmill.com',
         :authorize_url => 'http://readmill.com/oauth/authorize',
-        :token_url => 'http://readmill.com/oauth/token'
+        :token_url => 'http://readmill.com/oauth/token',
+        :authorize_params => { :scope => 'non-expiring' }
       }
 
       uid { raw_info['id'] }
@@ -27,7 +28,7 @@ module OmniAuth
           },
         }
       end
-      
+
       extra do
         {
           'books_interesting' => raw_info['books_interesting'],
