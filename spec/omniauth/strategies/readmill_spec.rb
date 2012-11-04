@@ -7,7 +7,7 @@ describe OmniAuth::Strategies::Readmill do
   describe '#client' do
     subject { strategy.new(app) }
 
-    specify { subject.client.options[:authorize_url].should == 'http://readmill.com/oauth/authorize' }
-    specify { subject.client.options[:token_url].should == 'http://readmill.com/oauth/token' }
+    specify { subject.client.options[:authorize_url].should == 'https://readmill.com/oauth/authorize' }
+    specify { subject.client.options[:token_url].should == 'https://readmill.com/oauth/token' }
   end
 end
