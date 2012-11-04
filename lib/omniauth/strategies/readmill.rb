@@ -4,12 +4,12 @@ module OmniAuth
   module Strategies
     class Readmill < OmniAuth::Strategies::OAuth2
       option :client_options, {
-        :site => 'https://api.readmill.com',
-        :authorize_url => 'https://readmill.com/oauth/authorize',
-        :token_url => 'https://readmill.com/oauth/token'
+        site: 'https://api.readmill.com',
+        authorize_url: 'https://readmill.com/oauth/authorize',
+        token_url: 'https://readmill.com/oauth/token'
       }
       option :authorize_params, {
-        :scope => 'non-expiring'
+        scope: 'non-expiring'
       }
 
       uid { raw_info['id'] }
