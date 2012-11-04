@@ -11,6 +11,7 @@ module OmniAuth
       option :authorize_params, {
         scope: 'non-expiring'
       }
+      option :provider_ignores_state, true
 
       uid { raw_info['id'] }
 
