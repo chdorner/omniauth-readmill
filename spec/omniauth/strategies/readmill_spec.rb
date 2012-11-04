@@ -9,6 +9,6 @@ describe OmniAuth::Strategies::Readmill do
 
     specify { subject.client.options[:authorize_url].should == 'https://readmill.com/oauth/authorize' }
     specify { subject.client.options[:token_url].should == 'https://readmill.com/oauth/token' }
-    specify { subject.client.options[:authorize_params].should include(:scope => 'non-expiring') }
+    specify { subject.authorize_params.should include(:scope => 'non-expiring') }
   end
 end

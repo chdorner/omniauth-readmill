@@ -6,8 +6,10 @@ module OmniAuth
       option :client_options, {
         :site => 'https://api.readmill.com',
         :authorize_url => 'https://readmill.com/oauth/authorize',
-        :token_url => 'https://readmill.com/oauth/token',
-        :authorize_params => { :scope => 'non-expiring' }
+        :token_url => 'https://readmill.com/oauth/token'
+      }
+      option :authorize_params, {
+        :scope => 'non-expiring'
       }
 
       uid { raw_info['id'] }
